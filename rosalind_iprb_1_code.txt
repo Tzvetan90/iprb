@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr 28 13:37:34 2017
+
+@author: Stefano
+"""
+
+with open('rosalind_iprb.txt','r') as inp:
+    with open('output_iprb.txt','w') as out:
+        (k,m,n)=inp.read().rstrip().split()
+        k=int(k)
+        m=int(m)
+        n=int(n)
+        p=k+m+n
+        out.write(str(((4*k*(k-1))+4*((2*k*m)+(2*k*n)+(m*n))+3*m*(m-1))/float((4*p*(p-1)))))
